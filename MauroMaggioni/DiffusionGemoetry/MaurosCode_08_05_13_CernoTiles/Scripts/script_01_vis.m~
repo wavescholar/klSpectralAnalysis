@@ -1,0 +1,18 @@
+%% Color panels by eigenfunction values
+pEigenIdxs = 12;
+pSamples = 1:4;
+
+for i = 1:length(pSamples)
+    I = imread([DataDir 'MaskData/' Tiles_labels{pSamples(i)} 'Image-MarkerImage.jpg']);
+    tile_idxs = find(Tiles_numlabels==pSamples(i));
+    fig=figure;
+    set(gcf,'Position',[329,132,1178,930]);
+    imagesc([0,1],[0,1],I);axis off;hold on;
+    for k = 1:length(pEigenIdxs),
+        max_Tileloc = max(Tiles_loc(:,tile_idxs),[],2);
+        size_Tile = [size(I,2)/max_Tileloc(1),size(I,1)/max_Tileloc(2)];        
+        colors=mapvectorstocolors(G.EigenVecs(tile_idxs,pEigenIdxs(k)),colormap);
+        h=scatter(Tiles_loc(1,tile_idxs)/max_Tileloc(1),Tiles_loc(2,tile_idxs)/max_Tileloc(2),50,colors,'filled');
+    end;
+    set(gcf,'Name',Tiles_labels{pSamples(i)});
+end;

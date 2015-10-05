@@ -1,0 +1,8 @@
+function TileData_norm = NormalizeTileFeatures( TileData )
+
+% Do the simplest thing possible: replace each vector in the tile data by its mean
+for i = 1:length(TileData)
+    
+end
+
+return;

@@ -1,0 +1,172 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.3)  21 AUG 2013 21:57
+entering extended mode
+**D:/klSpectralAnalysis/test.tex
+(D:/klSpectralAnalysis/test.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(D:\klSpectralAnalysis\test.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+) <Data.pdf, id=1, 614.295pt x 794.97pt>
+File: Data.pdf Graphic file (type pdf)
+ <use Data.pdf>
+Package pdftex.def Info: Data.pdf used on input line 7.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+
+<spy_A_Zelnik_Manor.pdf, id=2, 614.295pt x 794.97pt>
+File: spy_A_Zelnik_Manor.pdf Graphic file (type pdf)
+
+<use spy_A_Zelnik_Manor.pdf>
+Package pdftex.def Info: spy_A_Zelnik_Manor.pdf used on input line 12.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+ <EigenCuts.pdf, id=3, 614.295pt x 794.97pt>
+File: EigenCuts.pdf Graphic file (type pdf)
+
+<use EigenCuts.pdf>
+Package pdftex.def Info: EigenCuts.pdf used on input line 17.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+ <3DData.pdf, id=4, 614.295pt x 794.97pt>
+File: 3DData.pdf Graphic file (type pdf)
+ <use 3DData.pdf>
+Package pdftex.def Info: 3DData.pdf used on input line 22.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+
+<DiffusionMapEigenValues.pdf, id=5, 614.295pt x 794.97pt>
+File: DiffusionMapEigenValues.pdf Graphic file (type pdf)
+
+<use DiffusionMapEigenValues.pdf>
+Package pdftex.def Info: DiffusionMapEigenValues.pdf used on input line 27.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+
+<DiffusionEigenVectors23.pdf, id=6, 614.295pt x 794.97pt>
+File: DiffusionEigenVectors23.pdf Graphic file (type pdf)
+
+<use DiffusionEigenVectors23.pdf>
+Package pdftex.def Info: DiffusionEigenVectors23.pdf used on input line 32.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+
+<CoefficientOfRegressionFunction.pdf, id=7, 614.295pt x 794.97pt>
+File: CoefficientOfRegressionFunction.pdf Graphic file (type pdf)
+
+<use CoefficientOfRegressionFunction.pdf>
+Package pdftex.def Info: CoefficientOfRegressionFunction.pdf used on input line
+ 38.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+
+<EnergyCaptureAsFunctionOfNumberOfCoefficientsKept.pdf, id=8, 614.295pt x 794.9
+7pt>
+File: EnergyCaptureAsFunctionOfNumberOfCoefficientsKept.pdf Graphic file (type 
+pdf)
+ <use EnergyCaptureAsFunctionOfNumberOfCoefficientsKept.pdf>
+Package pdftex.def Info: EnergyCaptureAsFunctionOfNumberOfCoefficientsKept.pdf 
+used on input line 43.
+(pdftex.def)             Requested size: 276.00105pt x 357.1752pt.
+ [1
+
+{C:/Users/cernostics/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <D:
+/klSpectralAnalysis/Data.pdf>] [3 <D:/klSpectralAnalysis/spy_A_Zelnik_Manor.pdf
+>] [4 <D:/klSpectralAnalysis/EigenCuts.pdf>] [5 <D:/klSpectralAnalysis/3DData.p
+df>]
+[6 <D:/klSpectralAnalysis/DiffusionMapEigenValues.pdf>] [7 <D:/klSpectralAnalys
+is/DiffusionEigenVectors23.pdf>] [8 <D:/klSpectralAnalysis/CoefficientOfRegress
+ionFunction.pdf>] [9 <D:/klSpectralAnalysis/EnergyCaptureAsFunctionOfNumberOfCo
+efficientsKept.pdf>] (D:\klSpectralAnalysis\test.aux) ) 
+Here is how much of TeX's memory you used:
+ 1144 strings out of 494045
+ 15655 string characters out of 3145955
+ 64804 words of memory out of 3000000
+ 4480 multiletter control sequences out of 15000+200000
+ 4245 words of font info for 16 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,5n,19p,257b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on test.pdf (9 pages, 10648331 bytes).
+PDF statistics:
+ 82 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,16 @@
+﻿Build started 4/20/2013 7:19:09 PM.
+     1>Project "D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\test\test.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Release\test.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I..\..\include /Zi /nologo /W3 /WX- /O2 /Ob1 /D NDEBUG /D PREP /D WIN32 /D _CONSOLE /D ANN_NO_RANDOM /D _VC80_UPGRADE=0x0710 /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc100.pdb" /Gd /TP /errorReport:prompt ..\..\test\ann_test.cpp ..\..\test\rand.cpp
+         ann_test.cpp
+     1>..\..\test\ann_test.cpp(45): fatal error C1083: Cannot open include file: 'ANN/ANN.h': No such file or directory
+         rand.cpp
+     1>d:\klspectralanalysis\mariomaggioni\ann\ann_1.1.2\test\rand.h(39): fatal error C1083: Cannot open include file: 'ANN/ANN.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\test\test.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.39

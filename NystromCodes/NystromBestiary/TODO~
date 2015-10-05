@@ -1,0 +1,5 @@
+- replace calls to pinv with pinv(..., 0) so aren't regularizing Nystrom extensions unintentionally
+- modularize the visualization code better (the code is very repetitive, and tedious to edit)
+
+
+

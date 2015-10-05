@@ -1,0 +1,28 @@
+% Note: this will generate about 1000Mb of data
+
+% Create the distance matrix for the Abalone dataset
+clear
+load abalone_dataset
+X = generate_distance_matrix(abaloneInputs');
+save abalone_distance_matrix.mat
+
+% Create the distance matrix for the Wine dataset
+clear
+load winequality_data
+X = generate_distance_matrix(X);
+save winequality_distance_matrix.mat
+
+% Create the distance matrix for the Kin8nm dataset
+clear
+load kin8nm.data
+kin8nm_dist = generate_distance_matrix(kin8nm);
+save kin8nm_distance_matrix.mat
+
+% Create the distance matrix for the Spam dataset
+clear
+load spam.data
+spam_dist = generate_distance_matrix(spam);
+save spam-distance-matrix.mat
+
+
+

@@ -1,0 +1,20 @@
+﻿Build started 4/20/2013 7:19:26 PM.
+     1>Project "D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\dll\dll.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Release\dll.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\dll\.\Release\dll.dll) does not match the Linker's OutputFile property value (D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\bin\ANN.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(dll) does not match the Linker's OutputFile property value (ANN). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         All outputs are up-to-date.
+         dll.vcxproj -> D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\dll\.\Release\dll.dll
+       FinalizeBuildStatus:
+         Deleting file ".\Release\dll.unsuccessfulbuild".
+         Touching ".\Release\dll.lastbuildstate".
+     1>Done Building Project "D:\klSpectralAnalysis\MarioMaggioni\ANN\ann_1.1.2\MS_Win32\dll\dll.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06

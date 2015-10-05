@@ -1,0 +1,90 @@
+%% Start parallel Matlab
+if matlabpool('size')==0,
+    matlabpool
+end;
+
+%% Location of data
+DataDir = '~/Documents/Projects/Cernostics/Data/V3_0_1_Panel2/';
+% This would be a typical file name
+% FileName = 'Gei3308012low-RA-Panel2-Gei3308012_partA1_slide2-X0_7570_Y0_6614_W_3499_H_5115_caseData';
+% Load specific file name
+%load([DataDir FileName]);
+
+
+%% Load all tile data for all panels
+fprintf('\n Loading data for all panels...');
+load([DataDir 'V3_0_1_Panel2_allTileData']);
+fprintf('done.');
+
+%% Each tile has its own set of features, all of different dimensionality since the number of cells in a tile varies,
+% and the dimension of a feature may depend (e.g. be equal to) the number of cells
+% Compress and normalize the feature set of each tile, return a data matrix D by N, with D the number of features and N the total 
+% number of tiles
+fprintf('\n Normalizing panel data...');
+allTileData_norm = NormalizeTileFeatures(allTileData);
+fprintf('done.');
+
+%% Extract some other info from the tiles
+Tiles_loc         = GetTileLocations(allTileData);                                  % Locations of tiles
+[Tiles_numlabels,Tiles_labels] = GetTileLabels(allTileData);                        % Name of the panel for each tile
+[Tiles_risk,Tiles_risk_labels,Tiles_diagnosis,Tiles_diagnosis_label] = GetRiskAndDiagnosis(Tiles_labels);   % Label for risk and diagnosis for each tile
+Tiles_diagnosisall = Tiles_diagnosis( Tiles_numlabels );                            
+Tiles_riskall = Tiles_risk( Tiles_numlabels );
+
+
+%% Now construct proximity graph and diffusion map
+graphDiffusion_opts = struct( ...
+    'kNN'           , 100, ...                          % How many nearest neighbors each point is connected to
+    'kNNAutotune'   , 15, ...                           % Local scale parameter = distance to the kNNAutotune-th nearest neighbor
+    'Normalization' , 'smarkov', ...                    % How to normalize diffusion matrix
+    'kEigenVecs'    , 500 );                            % How many eigenvectors to compute
+G = GraphDiffusion(allTileData_norm, 0, graphDiffusion_opts);
+figure;plot(G.EigenVals);title('Plot of diffusion eigenvalues');
+
+%% Visualize some stuff
+% Some diffusion embeddings
+figure;scatter3(G.EigenVecs(:,2),G.EigenVecs(:,3),G.EigenVecs(:,4),30,G.EigenVecs(:,5),'filled');title('Diffusion map (2,3,4), color=next eigenvector');
+figure;scatter3(G.EigenVecs(:,3),G.EigenVecs(:,4),G.EigenVecs(:,5),30,G.EigenVecs(:,6),'filled');title('Diffusion map (3,4,5), color=next eigenvector');
+
+figure;scatter3(G.EigenVecs(:,2),G.EigenVecs(:,3),G.EigenVecs(:,4),30,Tiles_numlabels,'filled');colorbar;title('Diffusion map (2,3,4), color=Tile');
+figure;scatter3(G.EigenVecs(:,3),G.EigenVecs(:,4),G.EigenVecs(:,5),30,Tiles_numlabels,'filled');colorbar;title('Diffusion map (2,3,4), color=Tile');
+figure;scatter3(G.EigenVecs(:,4),G.EigenVecs(:,5),G.EigenVecs(:,6),30,Tiles_numlabels,'filled');colorbar;title('Diffusion map (2,3,4), color=Tile');
+
+figure;gscatter(G.EigenVecs(:,2),G.EigenVecs(:,3),Tiles_riskall,[],[],10);legend(Tiles_risk_labels);title('Diffusion map (2,3), color=risk');
+figure;gscatter(G.EigenVecs(:,13),G.EigenVecs(:,12),Tiles_riskall,[],[],10);legend(Tiles_risk_labels);title('Diffusion map (12,13), color=risk');
+
+% Risk as a function on diffusion embedding
+figure;
+for k = 2:20,
+    gscatter(G.EigenVecs(:,k),G.EigenVecs(:,k+1),Tiles_riskall,[],[],10);legend(Tiles_risk_labels);
+    title(sprintf('Coordinates %d,%d, color=risk ',k,k+1));pause;
+end;
+
+% A possibly interesting slice of diffusion embedding????
+figure;gscatter(G.EigenVecs(:,12),G.EigenVecs(:,13),Tiles_riskall,[],[],10);legend(Tiles_risk_labels);
+
+
+% Diagnosis as a function on diffusion embedding
+figure;
+for k = 2:30,
+    gscatter(G.EigenVecs(:,k),G.EigenVecs(:,k+1),Tiles_diagnosisall,[],[],10);legend(Tiles_diagnosis_label);
+    title(sprintf('Coordinates %d,%d, color=diagnosis ',k,k+1));pause;
+end;
+
+
+
+%% One can learn to discriminate between RA and HGD using eigenvectors.
+% Right now simply approximate a disciminating function between RA and HGD with diffusion eigenvectors, just to see if this is
+% feasible at all
+discr=((Tiles_diagnosisall==2)-0.5)*2;                          % Create discriminating function
+F_coeffs = discr*G.EigenVecs;
+F=F_coeffs*G.EigenVecs';                               % Expand function on eigenvectors
+
+figure;plot(F_coeffs);title('Coefficient of regression function');
+figure;plot(cumsum(F_coeffs.^2)/norm(F));title('Energy capture as a function of number of coefficients kept);
+
+%% Visualize F as a function over tiles (and therefore panels)
+script_01_vis
+
+
+
